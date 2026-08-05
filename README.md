@@ -110,6 +110,9 @@ https://ghpak.github.io
 ## Publications Featured on the Website
 
 ### Journal Publications
+* **VIGS SLAM: IMU-Based Large-Scale RGB-D 3-D Gaussian Splatting SLAM**
+  Gyuhyeon Pak, and Euntai Kim
+  IEEE Transactions on Instrumentation and Measurement, vol. 75, pp. 5010510–5010520, June 2026.
 
 * **GRIL-Calib: Targetless Ground Robot IMU-LiDAR Extrinsic Calibration Method using Ground Plane Motion Constraints**
   TaeYoung Kim, Gyuhyeon Pak, and Euntai Kim

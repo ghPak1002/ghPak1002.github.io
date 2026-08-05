@@ -15,7 +15,7 @@ const manuscripts = [
 
 const journalPublications = [
   {
-    title: "VIGS-SLAM: Visual-Inertial Gaussian Splatting SLAM",
+    title: "VIGS SLAM: IMU-Based Large-Scale RGB-D 3-D Gaussian Splatting SLAM",
     authors: ["Gyuhyeon Pak", "Euntai Kim"],
     venue: "IEEE Transactions on Instrumentation and Measurement",
     details: "",
