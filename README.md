@@ -84,7 +84,7 @@ git push
 After the workflow completes, the updated website will be available at:
 
 ```text
-https://ghpak.github.io
+https://ghPak1002.github.io
 ```
 
 ## Project Structure
