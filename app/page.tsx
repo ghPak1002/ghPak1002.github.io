@@ -175,8 +175,8 @@ export default function Home() {
                 src="/profile.jpg"
                 alt="Gyuhyeon Pak"
                 width={420}
-                height={520}
-                className="h-[430px] w-[340px] rounded-[1.5rem] object-cover object-center sm:h-[500px] sm:w-[390px]"
+                height={630}
+                className="h-[630px] w-[420px] rounded-[1.5rem] object-cover object-center sm:h-[630px] sm:w-[420px]"
                 priority
               />
             </div>
