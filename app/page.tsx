@@ -18,7 +18,7 @@ const journalPublications = [
     title: "VIGS SLAM: IMU-Based Large-Scale RGB-D 3-D Gaussian Splatting SLAM",
     authors: ["Gyuhyeon Pak", "Euntai Kim"],
     venue: "IEEE Transactions on Instrumentation and Measurement",
-    details: "",
+    details: "vol. 75, pp. 5010510–5010520",
     date: "May 2026",
     type: "Journal Article",
     paperUrl: "https://ieeexplore.ieee.org/document/11520407/",
