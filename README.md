@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gyuhyeon Pak — Research Portfolio
 
-## Getting Started
+Personal research portfolio and academic CV website for **Gyuhyeon Pak**, a graduate researcher working on robotic perception and spatial intelligence.
 
-First, run the development server:
+The website presents research interests, publications, manuscripts, projects, and professional information related to:
+
+* Visual-Inertial SLAM
+* Gaussian Splatting
+* LiDAR Localization
+* Robotic Perception
+* Sensor Calibration
+* 3D Place Recognition
+
+## Live Website
+
+https://ghpak.github.io
+
+## Website Sections
+
+* **About** — Research background and interests
+* **Research** — Major research topics
+* **Publications** — Journal and conference publications
+* **Manuscripts** — Ongoing research work
+* **Projects** — Government-funded and industry-sponsored research projects
+* **CV** — Academic and professional experience
+* **Contact** — Email copy functionality
+
+## Technology Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* GitHub Pages
+* GitHub Actions
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ghpak/ghpak.github.io.git
+cd ghpak.github.io
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the following address in a browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production Build
 
-## Learn More
+Create a static production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The exported website files will be generated in the `out` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The website is automatically deployed to GitHub Pages through GitHub Actions whenever changes are pushed to the `main` branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+After the workflow completes, the updated website will be available at:
+
+```text
+https://ghpak.github.io
+```
+
+## Project Structure
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── components/
+│       └── Navbar.tsx
+├── next.config.ts
+├── package.json
+└── README.md
+```
+
+## Publications Featured on the Website
+
+### Journal Publications
+
+* **GRIL-Calib: Targetless Ground Robot IMU-LiDAR Extrinsic Calibration Method using Ground Plane Motion Constraints**
+  TaeYoung Kim, Gyuhyeon Pak, and Euntai Kim
+  IEEE Robotics and Automation Letters, vol. 9, no. 6, pp. 5409–5416, June 2024.
+
+### Conference Publications
+
+* **RE-TRIP: Reflectivity Instance Augmented Triangle Descriptor for 3D Place Recognition**
+  Yechan Park, Gyuhyeon Pak, and Euntai Kim
+  IEEE International Conference on Robotics and Automation, Atlanta, USA, May 2025.
+
+* **Robust Rotation Initialization for LVI Localization Via 2D-3D Line Matching**
+  Gyuhyeon Pak, Haemin Cho, and Euntai Kim
+  International Conference on Control, Automation and Systems, Incheon, Korea, November 2025.
+
+* **Leveraging 2D Semantic Information for Dynamic Object Removal in Static 3D Point Cloud Map Construction**
+  Yechan Park, Gyuhyeon Pak, and Euntai Kim
+  International Conference on Control, Automation and Systems, Jeju, Korea, November 2024.
+
+* **Robust Feature Tracking for Better Visual-Inertial System using Dynamic Mask**
+  Gyuhyeon Pak, Taeyoung Kim, and Euntai Kim
+  International Conference on Control, Automation and Systems, Busan, Korea, November 2022.
+
+* **Metric Learning in Mini-batch for Robust 6-DoF Camera Relocalization in Outdoor Environments**
+  Gyuhyeon Pak, Hongje Seong, and Euntai Kim
+  International Conference on Ubiquitous Robots, Gangneung, Korea, July 2021.
+
+* **공장 환경에서의 전역 설명자를 활용한 이동 로봇의 초기 위치 추정**
+  박예찬, 박규현, 김은태
+  제19회 한국로봇종합학술대회, 평창, 2024년 2월.
+
+## License
+
+The source code may be used as a reference for personal academic portfolio development.
+
+Research papers, figures, videos, datasets, and other research materials remain the property of their respective authors and publishers.

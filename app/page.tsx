@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const manuscripts = [
@@ -112,12 +113,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-    <main 
-    id="home"
-    className="min-h-screen bg-slate-950 text-white">
-      <section className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-20">
-        <div className="max-w-4xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+    <main className="min-h-screen bg-[#f7f9fb] text-[#22313f]">
+      <section 
+          id="home"
+          className="mx-auto grid min-h-screen max-w-6xl items-center gap-14 px-6 py-24 pt-32 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="max-w-3xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#547a95]">
             Robotics · Spatial AI · 3D Vision
           </p>
 
@@ -125,11 +126,11 @@ export default function Home() {
             Gyuhyeon Pak
           </h1>
 
-          <h2 className="mt-6 text-2xl font-medium text-slate-300 sm:text-3xl">
+          <h2 className="mt-6 text-2xl font-medium text-[#4f6474] sm:text-3xl">
             Graduate Researcher in Visual-Inertial SLAM and Gaussian Splatting
           </h2>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-400">
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-[#647786]">
             I develop robust spatial perception systems for robotics, focusing
             on visual-inertial SLAM, Gaussian Splatting, and LiDAR localization.
           </p>
@@ -137,14 +138,14 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#publications"
-              className="rounded-lg bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
+              className="rounded-full bg-[#547a95] px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-[#466b84]"
             >
               Publications
             </a>
 
             <a
               href="#projects"
-              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900"
+              className="rounded-full border border-[#cfd9e1] px-6 py-3 font-semibold text-[#22313f] transition hover:border-[#9eb1bf] hover:bg-white"
             >
               Projects
             </a>
@@ -158,22 +159,38 @@ export default function Home() {
             ].map((topic) => (
               <span
                 key={topic}
-                className="rounded-full border border-slate-800 bg-slate-900 px-4 py-2 text-sm text-slate-300"
+                className="rounded-full border border-[#dde5eb] bg-white px-4 py-2 text-sm text-[#4f6474]"
               >
                 {topic}
               </span>
             ))}
           </div>
         </div>
+
+        <div className="flex justify-center md:justify-end">
+          <div className="relative">
+            <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-[#dce8f2]" />
+            <div className="overflow-hidden rounded-[2rem] border border-[#d8e1e8] bg-white p-3 shadow-[0_24px_70px_rgba(58,78,92,0.15)]">
+              <Image
+                src="/profile.jpg"
+                alt="Gyuhyeon Pak"
+                width={420}
+                height={520}
+                className="h-[430px] w-[340px] rounded-[1.5rem] object-cover object-center sm:h-[500px] sm:w-[390px]"
+                priority
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
           id="about"
-          className="border-t border-slate-800 bg-slate-900/40 px-6 py-24"
+          className="border-t border-[#e3e9ee] bg-[#eef3f6] px-6 py-24"
         >
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_1.4fr]">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#547a95]">
                 About
               </p>
 
@@ -182,7 +199,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="space-y-6 text-lg leading-8 text-slate-400">
+            <div className="space-y-6 text-lg leading-8 text-[#647786]">
               <p>
                 I am a graduate researcher working on robust simultaneous localization and mapping
                 for autonomous robots. My research focuses on visual-inertial SLAM,
@@ -201,7 +218,7 @@ export default function Home() {
       <section id="research" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#547a95]">
               Research
             </p>
 
@@ -209,7 +226,7 @@ export default function Home() {
               Research Interests
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-400">
+            <p className="mt-6 text-lg leading-8 text-[#647786]">
               My research explores geometric estimation, 3D scene representation,
               and robust localization for real-world robotic systems.
             </p>
@@ -264,11 +281,11 @@ export default function Home() {
             ].map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition hover:-translate-y-1 hover:border-cyan-400/60"
+                className="rounded-3xl border border-[#dde5eb] bg-white p-8 shadow-[0_12px_36px_rgba(58,78,92,0.07)] transition hover:-translate-y-1 hover:border-[#7f9db1]"
               >
-                <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                <h3 className="text-2xl font-semibold text-[#22313f]">{item.title}</h3>
 
-                <p className="mt-4 leading-7 text-slate-400">
+                <p className="mt-4 leading-7 text-[#647786]">
                   {item.description}
                 </p>
 
@@ -276,7 +293,7 @@ export default function Home() {
                   {item.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-300"
+                      className="rounded-full bg-[#edf2f5] px-3 py-1 text-sm text-[#4f6474]"
                     >
                       {topic}
                     </span>
@@ -289,11 +306,11 @@ export default function Home() {
       </section>
       <section
         id="publications"
-        className="border-t border-slate-800 bg-slate-900/40 px-6 py-24"
+        className="border-t border-[#e3e9ee] bg-[#eef3f6] px-6 py-24"
       >
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#547a95]">
               Publications
             </p>
 
@@ -301,28 +318,28 @@ export default function Home() {
               Publications
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-400">
+            <p className="mt-6 text-lg leading-8 text-[#647786]">
               Journal articles and conference papers on Robotics and Spatial AI.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#journal-publications"
-              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900"
+              className="rounded-full border border-[#cfd9e1] px-6 py-3 font-semibold text-[#22313f] transition hover:border-[#9eb1bf] hover:bg-white"
             >
               Journal Publications
             </a>
 
             <a
               href="#conference-publications"
-              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900"
+              className="rounded-full border border-[#cfd9e1] px-6 py-3 font-semibold text-[#22313f] transition hover:border-[#9eb1bf] hover:bg-white"
             >
               Conference Publications
             </a>
 
             <a
               href="#ongoing-research"
-              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900"
+              className="rounded-full border border-[#cfd9e1] px-6 py-3 font-semibold text-[#22313f] transition hover:border-[#9eb1bf] hover:bg-white"
             >
               Ongoing Research
             </a>
@@ -332,18 +349,18 @@ export default function Home() {
           <div 
           id="journal-publications"
           className="mt-16">
-            <div className="flex items-end justify-between border-b border-slate-800 pb-4">
+            <div className="flex items-end justify-between border-b border-[#dde5eb] pb-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#547a95]">
                   Peer-Reviewed
                 </p>
 
-                <h3 className="mt-2 text-2xl font-bold text-white">
+                <h3 className="mt-2 text-2xl font-bold text-[#22313f]">
                   Journal Publications
                 </h3>
               </div>
 
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-[#7e909d]">
                 {journalPublications.length} publication
               </span>
             </div>
@@ -352,29 +369,29 @@ export default function Home() {
               {journalPublications.map((publication) => (
                 <article
                   key={publication.title}
-                  className="rounded-2xl border border-slate-800 bg-slate-950 p-7 transition hover:border-cyan-400/60"
+                  className="rounded-3xl border border-[#dde5eb] bg-white p-7 shadow-[0_10px_30px_rgba(58,78,92,0.06)] transition hover:border-[#7f9db1]"
                 >
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                    <span className="rounded-full bg-[#547a95]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#547a95]">
                       {publication.type}
                     </span>
 
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-[#7e909d]">
                       {publication.date}
                     </span>
                   </div>
 
-                  <h4 className="mt-4 text-xl font-semibold leading-snug text-white">
+                  <h4 className="mt-4 text-xl font-semibold leading-snug text-[#22313f]">
                     {publication.title}
                   </h4>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-400">
+                  <p className="mt-3 text-sm leading-6 text-[#647786]">
                     {publication.authors.map((author, index) => (
                       <span key={author}>
                         <span
                           className={
                             author === "Gyuhyeon Pak"
-                              ? "font-semibold text-cyan-400"
+                              ? "font-semibold text-[#547a95]"
                               : ""
                           }
                         >
@@ -386,11 +403,11 @@ export default function Home() {
                     ))}
                   </p>
 
-                  <p className="mt-4 font-medium text-slate-300">
+                  <p className="mt-4 font-medium text-[#4f6474]">
                     {publication.venue}
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-[#7e909d]">
                     {publication.details}, {publication.date}
                   </p>
 
@@ -401,7 +418,7 @@ export default function Home() {
                           href={publication.paperUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                          className="inline-flex rounded-lg border border-[#cfd9e1] px-4 py-2 text-sm font-semibold text-[#22313f] transition hover:border-[#547a95] hover:text-[#547a95]"
                         >
                           View Paper
                         </a>
@@ -412,7 +429,7 @@ export default function Home() {
                           href={publication.codeUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                          className="inline-flex rounded-lg border border-[#cfd9e1] px-4 py-2 text-sm font-semibold text-[#22313f] transition hover:border-[#547a95] hover:text-[#547a95]"
                         >
                           View Code
                         </a>
@@ -428,18 +445,18 @@ export default function Home() {
           <div 
           id="conference-publications"
           className="mt-16">
-            <div className="flex items-end justify-between border-b border-slate-800 pb-4">
+            <div className="flex items-end justify-between border-b border-[#dde5eb] pb-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#547a95]">
                   Proceedings
                 </p>
 
-                <h3 className="mt-2 text-2xl font-bold text-white">
+                <h3 className="mt-2 text-2xl font-bold text-[#22313f]">
                   Conference Publications
                 </h3>
               </div>
 
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-[#7e909d]">
                 {conferencePublications.length} publications
               </span>
             </div>
@@ -448,33 +465,33 @@ export default function Home() {
               {conferencePublications.map((publication) => (
                 <article
                   key={publication.title}
-                  className="rounded-2xl border border-slate-800 bg-slate-950 p-7 transition hover:border-cyan-400/60"
+                  className="rounded-3xl border border-[#dde5eb] bg-white p-7 shadow-[0_10px_30px_rgba(58,78,92,0.06)] transition hover:border-[#7f9db1]"
                 >
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-slate-800 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-300">
+                    <span className="rounded-full bg-[#edf2f5] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#4f6474]">
                       {publication.type}
                     </span>
 
-                    <span className="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-400">
+                    <span className="rounded-full bg-[#547a95]/10 px-3 py-1 text-xs font-semibold text-[#547a95]">
                       {publication.abbreviation}
                     </span>
 
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-[#7e909d]">
                       {publication.date}
                     </span>
                   </div>
 
-                  <h4 className="mt-4 text-xl font-semibold leading-snug text-white">
+                  <h4 className="mt-4 text-xl font-semibold leading-snug text-[#22313f]">
                     {publication.title}
                   </h4>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-400">
+                  <p className="mt-3 text-sm leading-6 text-[#647786]">
                     {publication.authors.map((author, index) => (
                       <span key={author}>
                         <span
                           className={
                             author === "Gyuhyeon Pak" || author === "박규현"
-                              ? "font-semibold text-cyan-400"
+                              ? "font-semibold text-[#547a95]"
                               : ""
                           }
                         >
@@ -486,11 +503,11 @@ export default function Home() {
                     ))}
                   </p>
 
-                  <p className="mt-4 font-medium text-slate-300">
+                  <p className="mt-4 font-medium text-[#4f6474]">
                     {publication.venue}
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-[#7e909d]">
                     {publication.location} · {publication.date}
                   </p>
 
@@ -500,7 +517,7 @@ export default function Home() {
                         href={publication.paperUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                        className="inline-flex rounded-lg border border-[#cfd9e1] px-4 py-2 text-sm font-semibold text-[#22313f] transition hover:border-[#547a95] hover:text-[#547a95]"
                       >
                         View Paper
                       </a>
@@ -515,12 +532,12 @@ export default function Home() {
           <div 
           id="ongoing-research"
           className="mt-16">
-            <div className="border-b border-slate-800 pb-4">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            <div className="border-b border-[#dde5eb] pb-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#547a95]">
                 Ongoing Research
               </p>
 
-              <h3 className="mt-2 text-2xl font-bold text-white">
+              <h3 className="mt-2 text-2xl font-bold text-[#22313f]">
                 Manuscripts
               </h3>
             </div>
@@ -529,21 +546,21 @@ export default function Home() {
               {manuscripts.map((manuscript) => (
                 <article
                   key={manuscript.title}
-                  className="rounded-2xl border border-slate-800 bg-slate-950 p-7"
+                  className="rounded-3xl border border-[#dde5eb] bg-white p-7 shadow-[0_10px_30px_rgba(58,78,92,0.06)]"
                 >
-                  <span className="rounded-full bg-amber-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-300">
+                  <span className="rounded-full bg-[#f4ead8] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#956f32]">
                     {manuscript.status}
                   </span>
 
-                  <h4 className="mt-5 text-xl font-semibold leading-snug text-white">
+                  <h4 className="mt-5 text-xl font-semibold leading-snug text-[#22313f]">
                     {manuscript.title}
                   </h4>
 
-                  <p className="mt-3 text-sm text-slate-400">
+                  <p className="mt-3 text-sm text-[#647786]">
                     {manuscript.authors.join(", ")}
                   </p>
 
-                  <p className="mt-5 leading-7 text-slate-400">
+                  <p className="mt-5 leading-7 text-[#647786]">
                     {manuscript.description}
                   </p>
 
@@ -553,7 +570,7 @@ export default function Home() {
                         href={manuscript.paperUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+                        className="inline-flex rounded-lg border border-[#cfd9e1] px-4 py-2 text-sm font-semibold text-[#22313f] transition hover:border-[#547a95] hover:text-[#547a95]"
                       >
                         View Paper
                       </a>
@@ -568,7 +585,7 @@ export default function Home() {
       <section id="projects" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#547a95]">
               Projects
             </p>
 
@@ -576,7 +593,7 @@ export default function Home() {
               Research Projects
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-400">
+            <p className="mt-6 text-lg leading-8 text-[#647786]">
               Government-funded and industry-sponsored research projects in robotic
               perception, autonomous navigation, depth sensing, and mobile
               manipulation.
@@ -659,38 +676,38 @@ export default function Home() {
             ].map((project, index) => (
               <article
                 key={project.title}
-                className="group grid gap-6 rounded-2xl border border-slate-800 bg-slate-900 p-8 transition hover:-translate-y-1 hover:border-cyan-400/60 md:grid-cols-[160px_1fr]"
+                className="group grid gap-6 rounded-3xl border border-[#dde5eb] bg-white p-8 shadow-[0_12px_36px_rgba(58,78,92,0.07)] transition hover:-translate-y-1 hover:border-[#7f9db1] md:grid-cols-[160px_1fr]"
               >
                 <div>
-                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#547a95]">
                     Project {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <p className="mt-4 text-sm leading-6 text-slate-500">
+                  <p className="mt-4 text-sm leading-6 text-[#7e909d]">
                     {project.period}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-semibold leading-snug text-white">
+                  <h3 className="text-2xl font-semibold leading-snug text-[#22313f]">
                     {project.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
+                  <p className="mt-2 text-sm leading-6 text-[#7e909d]">
                     {project.koreanTitle}
                   </p>
 
-                  <div className="mt-5 border-l-2 border-cyan-400/60 pl-4">
-                    <p className="font-medium text-slate-300">
+                  <div className="mt-5 border-l-2 border-[#8ea9ba] pl-4">
+                    <p className="font-medium text-[#4f6474]">
                       {project.organization}
                     </p>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#7e909d]">
                       {project.koreanOrganization}
                     </p>
                   </div>
 
-                  <p className="mt-6 leading-7 text-slate-400">
+                  <p className="mt-6 leading-7 text-[#647786]">
                     {project.description}
                   </p>
 
@@ -698,7 +715,7 @@ export default function Home() {
                     {project.topics.map((topic) => (
                       <span
                         key={topic}
-                        className="rounded-full border border-slate-700 bg-slate-950 px-3 py-1 text-sm text-slate-300"
+                        className="rounded-full border border-[#cfd9e1] bg-white px-3 py-1 text-sm text-[#4f6474]"
                       >
                         {topic}
                       </span>
