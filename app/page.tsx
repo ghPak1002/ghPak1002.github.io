@@ -604,7 +604,7 @@ export default function Home() {
             {[
               {
                 title:
-                  "Core Technology Development for 5G Edge-Based Mobile Manipulator Transportation and Manipulation",
+                  "Development of Core Technology for Mobile Manipulator for 5G Edge-Based Transportation and Manipulation",
                 koreanTitle:
                   "5G 엣지 기반 이송·조작을 위한 모바일 매니퓰레이터 핵심기술 개발",
                 period: "Apr. 2022 – Dec. 2025",
@@ -656,21 +656,21 @@ export default function Home() {
               },
               {
                 title:
-                  "AI-Converged Autonomous Navigation for Agile Robot Motion in Dense Crowds",
+                  "Development of Robot Intelligence Technology for Mobility with Learning Capability Toward Robust and Seamless Indoor and Outdoor Autonomous Navigation",
                 koreanTitle:
-                  "밀집군중 사이 민첩기동이 가능한 인공지능 융합 실내외 로봇 자율주행 기술개발",
-                period: "Apr. 2019 – Dec. 2022",
+                  "환경변화에 강인한 실내외 통합 자율주행을 위한 학습형 로봇이동지능기술 개발",
+                period: "May 2016 – Apr. 2020",
                 organization:
-                  "Ministry of Trade, Industry and Energy / Korea Electronics Technology Institute",
+                  "Ministry of Trade, Industry and Energy / Korea Evaluation Institute of Industrial Technology",
                 koreanOrganization:
-                  "산업통상자원부 / 전자부품연구원",
+                  "산업통상자원부 / 한국산업기술평가관리원",
                 description:
-                  "A government-funded project developing AI-integrated autonomous navigation technologies that enable indoor and outdoor robots to move safely and agilely through densely crowded environments.",
+                  "A government-funded research project developing learning-based robot mobility intelligence for robust and integrated autonomous navigation across changing indoor and outdoor environments.",
                 topics: [
-                  "Autonomous Navigation",
-                  "Crowd Navigation",
-                  "Mobile Robotics",
-                  "AI-Based Perception",
+                  "Learning-Based Navigation",
+                  "Indoor-Outdoor Navigation",
+                  "Environment Robustness",
+                  "Robot Mobility Intelligence",
                 ],
               },
             ].map((project, index) => (
